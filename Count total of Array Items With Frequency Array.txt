@@ -1,0 +1,20 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int N=Convert.ToInt32(Console.ReadLine());
+        int M=Convert.ToInt32(Console.ReadLine());
+        int []A= new int[N];
+        int []f= new int[100005];
+        for(int i=0; i<N; i++){
+            A[i]=Convert.ToInt32(Console.ReadLine());
+            f[A[i]]+=1;
+        }
+         for(int i=1; i<=M; i++){
+            Console.Write(f[i]);
+            Console.Write(' ');
+        }
+    }
+}
