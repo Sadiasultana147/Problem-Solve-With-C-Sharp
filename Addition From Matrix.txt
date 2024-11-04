@@ -1,0 +1,42 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        string[] dimensions = Console.ReadLine().Split(' ');
+        int row = Convert.ToInt32(dimensions[0]);
+        int column = Convert.ToInt32(dimensions[1]);
+        int [,] a= new int[row,column];
+        int [,] b= new int[row,column];
+        int [,] c= new int[row,column];
+        for(int i=0; i<row; i++){
+            string[] inputs = Console.ReadLine().Split(' ');
+            for(int j=0; j<column; j++){
+                a[i,j]=Convert.ToInt32(inputs[j]);
+            }
+        }
+        for(int i=0; i<row; i++){
+            string[] inputs = Console.ReadLine().Split(' ');
+            for(int j=0; j<column; j++){
+                b[i,j]=Convert.ToInt32(inputs[j]);
+            }
+        }
+        
+        for(int i=0; i<row; i++){
+            for(int j=0; j<column; j++){
+                c[i,j]=a[i,j] + b[i,j];
+            }
+        }
+        for(int i=0; i<row; i++){
+            for(int j=0; j<column; j++){
+                Console.Write(c[i,j]);
+                Console.Write(' ');
+            }
+            Console.WriteLine();
+        }
+    }
+}
