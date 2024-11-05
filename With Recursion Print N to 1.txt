@@ -1,0 +1,19 @@
+using System;
+
+public class HelloWorld
+{
+    
+    public static void Main(string[] args)
+    {
+        int N= Convert.ToInt32(Console.ReadLine());
+        printNumber(N);
+    }
+   public static void printNumber(int N){
+        if(N<1){
+            return;
+        }
+        Console.Write(N);
+        Console.Write(' ');
+        printNumber(N-1);
+    }
+}

@@ -1,0 +1,18 @@
+using System;
+
+public class HelloWorld
+{
+    
+    public static void Main(string[] args)
+    {
+        int N= Convert.ToInt32(Console.ReadLine());
+        printNumber(1, N);
+    }
+   public static void printNumber(int i, int N){
+        if(i>N){
+            return;
+        }
+        Console.WriteLine(i);
+        printNumber(i+1, N);
+    }
+}
