@@ -1,0 +1,19 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        string[] inputs=Console.ReadLine().Split(' ');
+        int X= Convert.ToInt32(inputs[0]);
+        int Y= Convert.ToInt32(inputs[1]);
+        swap(X,Y);
+    }
+    public static void swap(int X, int Y){
+        int temp=X;
+        X=Y;
+        Y=temp;
+        Console.Write($"{X} {Y}");
+       
+    }
+}
