@@ -1,0 +1,48 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int N = Convert.ToInt32(Console.ReadLine());
+        int[] arr = new int[N];
+        int[] resarr = new int[N * 2];
+        int resarrindex = 0;
+
+        for (int i = 0; i < N; i++)
+        {
+            arr[i] = Convert.ToInt32(Console.ReadLine());
+        }
+
+        for (int i = 0; i < N; i++)
+        {
+            for (int j = i + 1; j < N; j++)
+            {
+                int result = arr[i] + arr[j];
+                if (result < 0)
+                {
+                    resarr[resarrindex] = result * -1;
+                    resarrindex++;
+                }
+                else
+                {
+                    resarr[resarrindex] = result;
+                    resarrindex++;
+                }
+            }
+        }
+
+       
+        int min = int.MaxValue;
+        for (int i = 0; i < N * 2; i++)
+        {
+            if (min > resarr[i])
+            {
+                min = resarr[i];
+            }
+        }
+
+       
+        Console.WriteLine(min);
+    }
+}
